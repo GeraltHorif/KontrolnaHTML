@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
+
 .w1440 {
     max-width: 1440px;
     margin: 0 auto;
     background-color: #EFF0F3;
 }
+
 section {
     scroll-margin-top: 100px;
 }
@@ -78,7 +81,7 @@ header {
     gap: 10px;
     background: #6246EA;
     border-radius: 4px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 1s ease, transform 1s ease;
     padding: 10px 17px;
     margin: 22px 95px 20px 50px;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -90,8 +93,8 @@ header {
 }
 
 .button-BMaC:hover {
-    background-color: #6246EA;
-    transform: translateY(-1px);
+    background-color: #7158f3;
+    transform: translateY(-5px);
 }
 
 .button-BMaC:active {
@@ -189,21 +192,209 @@ header {
 }
 
 /*----------Category----------*/
-.category{
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.categories-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 67px 94px 50px 94px;
+}
+
+.categories-header h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #2B2C34;
+}
+
+.categories-header a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: right;
+    text-transform: capitalize;
+    color: #2B2C34;
+}
+
+.categories-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 37px;
+    margin: 0 94px 68px 94px;
+}
+
+.card {
+    width: 220px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    filter: drop-shadow(4px 6px 13px rgba(215, 215, 215, 0.25));
+    border-radius: 8px;
+    background: #FFFFFE;
+    padding-left: 30px;
+    gap: 30px;
+    transition: background-color 1s ease, transform 1s ease;
+}
+
+.card h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #2B2C34;
+    transition: color 1s ease;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFE;
+    border-radius: 8px;
+
+}
+
+.card:hover {
+    filter: drop-shadow(4px 6px 13px rgba(215, 215, 215, 0.25));
+    background-color: #6246EA;
+}
+
+.card:hover h3 {
+    color: #FFFFFE;
+}
+
+/*--------Articles fell----------*/
+.articles-feed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFE;
+    gap: 80px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.articles-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 80px 94px 30px 94px;
+}
+
+.articles-header h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #2B2C34;
+}
+
+.articles-header a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: right;
+    text-transform: capitalize;
+    color: #2B2C34;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки в ряд */
+    gap: 16px;
+    margin: 0 96px;
+}
+
+.post-card{
+    width: 300px;
+    height: 425px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #FFFFFE;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+.post-card:hover {
+    transform: translateY(-8px);
+    cursor: pointer;
+}
+
+.post-image img{
+    width: 260px;
+    height: 198px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+.post-content{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1;
 }
-.categories-header{
-    display: flex;
-    flex-direction: row;
-    gap: 814px;
-    margin: 0 95px;
+.post-content h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: capitalize;
+    color: #2B2C34;
 
 }
-.categories-card{
+.post-author {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.avatar {
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+}
 
+.author-info span {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #2B2C34;
+}
 
+.author-info small {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #2B2C34;
 }
