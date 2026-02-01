@@ -4,9 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Dasteen .Blog</title>
+    <link rel="stylesheet" href="rest.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="w1440">
+    <!-------Header------->
+    <header>
+        <div class="logo">
+            <a href="#">Dasteen<span>.Blog</span></a>
+        </div>
+        <!--Nav-->
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#category">Category</a>
+            <a href="">About Me</a>
+            <a href=""><img class="search-logo" src="/img/search1.png" alt="magnifying glass">Search</a>
+        </nav>
+        <!-------Buttom BMaC------->
+        <a href="https://www.buymeacoffee.com/yourname" class="button-BMaC" target="_blank">
+            <img src="/img/bmac.png" alt="paper cup">
+            <p>Buy Me A Coffee</p>
+        </a>
+    </header>
+    <!-------Main------->
 
+    <main>
+        <!--Hero-->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm Dasteen <br> Front End Dev</h1>
+
+                <p class="hero-description">
+                    On this blog I share tips and tricks, frameworks, projects, tutorials, etc.
+                    Make sure you subscribe to get the latest updates.
+                </p>
+
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email here...." required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="hero-image">
+                <img src="/img/himg.png" alt="Dasteen working on web development">
+            </div>
+        </section>
+        <!--Category-->
+        <section id="category" class="category">
+            <div class="categories-header">
+                <h2>Browse the category</h2>
+                <a href="#">See All Category</a>
+            </div>
+            <div class="categories-card">
+                <div>
+                    <img src="" alt="">
+                    <p>CSS</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <p>Javascript</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <p>Tailwind</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <p>Vue JS</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <p>React JS</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</div>
 </body>
 </html>
