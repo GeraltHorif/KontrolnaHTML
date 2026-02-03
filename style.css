@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 body, input, button, textarea, select {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -64,6 +66,12 @@ header {
     color: #2B2C34;
 }
 
+.navbar a:hover {
+    color: #2B2C34;
+    transform: scale(1.2);
+
+}
+
 .search-logo {
     width: 17px;
     height: 17px;
@@ -91,12 +99,10 @@ header {
 }
 
 .button-BMaC:hover {
-    background-color: #7158f3;
-    transform: translateY(-5px);
-}
 
-.button-BMaC:active {
-    transform: translateY(0);
+    background-color: #6246EA;
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(98, 70, 234, 0.2);
 }
 
 /*----------Main-----------*/
@@ -185,6 +191,12 @@ header {
     color: #FFFFFE;
 }
 
+.subscribe-form button:hover {
+    background-color: #6246EA;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(98, 70, 234, 0.2);
+}
+
 /*----------Category----------*/
 .category {
     display: flex;
@@ -259,11 +271,10 @@ header {
     align-items: center;
     background: #FFFFFE;
     border-radius: 8px;
-
 }
 
 .card:hover {
-    filter: drop-shadow(4px 6px 13px rgba(215, 215, 215, 0.25));
+    filter: drop-shadow(5px 7px 13px rgba(215, 215, 215, 0.25));
     background-color: #6246EA;
 }
 
@@ -330,6 +341,7 @@ header {
 }
 
 .post-card:hover {
+
     transform: translateY(-8px);
     cursor: pointer;
 }
@@ -340,6 +352,13 @@ header {
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 25px;
+}
+
+.post-link {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-decoration: none;
 }
 
 .post-content {
@@ -363,6 +382,7 @@ header {
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-top: 20px;
 }
 
 .avatar {
@@ -418,7 +438,7 @@ header {
 }
 
 .more-articles-button:hover {
-    background-color: #4b35c2;
+    background-color: #6246EA;
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(98, 70, 234, 0.2);
 }
@@ -484,7 +504,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 21px 200px 21px 25px;
+    padding: 21px 25px 21px 25px;
     background: #FFFFFE;
     border-radius: 8px;
     border: 1px solid #EAEAEA;
@@ -495,11 +515,13 @@ header {
     line-height: 25px;
     color: #C0C0C0;
 }
+
 .newsletter-form input::placeholder {
     color: #C0C0C0;
     opacity: 0.9;
     font-size: 20px;
 }
+
 .newsletter-form button {
     width: 145px;
     height: 67px;
@@ -519,17 +541,118 @@ header {
     color: #FFFFFE;
 }
 
+.newsletter-form button:hover {
+    background-color: #6246EA;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(98, 70, 234, 0.2);
+}
+
 /*----------Fotter-----------*/
-footer{
+footer {
     width: 100%;
+    height: 435px;
     display: flex;
     flex-direction: column;
-    padding: 70px 95px 263px 94px;
+    padding: 70px 95px 26px 95px;
     background: #E4E5E9;
-
 }
-.footer-top{
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 60px;
+
+/*----------Fotter Top----------*/
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo-footer {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 45px;
+    color: #001858;
+}
+
+.logo-footer span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #6246EA;
+}
+
+.footer-brand > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #2B2C34;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.footer-columns {
+    display: flex;
+    flex-direction: row;
+    gap: 95px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+.footer-col h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #2B2C34;
+    margin: 0;
+}
+
+.footer-col ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.footer-col ul li a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #2B2C34;
+    transition: color 0.3s ease;
+}
+
+/*----------Fotter Bottom----------*/
+.footer-bottom {
+    border-top: 1px solid #9A9494;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-bottom > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #2B2C34;
+    margin-top: 26px;
 }
