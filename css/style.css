@@ -157,20 +157,30 @@ header {
 }
 
 .subscribe-form input {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 21px 0 21px 25px;
+    padding: 21px 25px;
     width: 444px;
     height: 67px;
     background: #FFFFFE;
     border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #C0C0C0;
 }
 
 .subscribe-form input::placeholder {
     color: #C0C0C0;
     font-size: 20px;
     opacity: 1;
+}
+
+.subscribe-form input:focus {
+    box-shadow: 0 0 0 2px rgba(98, 70, 234, 0.2);
 }
 
 .subscribe-form button {
